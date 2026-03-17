@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Truss Structures</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        .main-header {
+        background-color: #581d1d;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        justify-content: center;
+        align-items: center;
+        }
+
+        .header-content {
+        display: flex;
+        align-items: center;    
+        max-width: 900px;
+        gap: 20px;               
+        }
+
+        .university-logo {
+        height: 80px;           
+        width: auto;
+        }
+
+        h1 {
+        margin: 0;
+        font-size: 1.5rem; 
+        font-family: 'Sarabun', sans-serif; 
+        }
+        model-viewer {
+            width: 100%;
+            height: 90vh;
+            background-color: #f3f1ed;
+        }
+        .blueprint-section {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        }
+
+        .blueprint-img {
+        max-width: 100%;
+        height: auto;  
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+        .header-content {
+            flex-direction: column; 
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .university-logo {
+            height: 60px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+        <img src="logo_spu.png" alt="โลโก้มหาวิทยาลัย" class="university-logo">
+        
+        <h1>
+            I46 "ไม้ติม"<br> 
+            โครงสร้างโครงถัก
+        </h1>
+    </div>
+    </header>
+    <model-viewer 
+        src="Bridge_Structure.glb" 
+        ios-src="Bridge_Structure.usdc" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        shadow-intensity="1" 
+        auto-rotate>
+        
+        <button slot="ar-button" style="background-color: rgb(243,241,237); border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; padding: 10px;">
+        </button>
+
+    </model-viewer>
+
+    <div style="text-align: center; padding: 20px;">
+        <h3>Scan to view a 3D AR model</h3>
+    </div>
+
+    <div class="blueprint-section">
+    <h2>Structures Design</h2>
+    <img src="Structure_Design.png" alt="แบบแปลนโครงสร้างสะพานไม้ไอติม" class="blueprint-img">
+
+    <div class="video-section">
+    <h2>Presentation Video</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src=" " frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>
