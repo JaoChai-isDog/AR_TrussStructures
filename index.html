@@ -39,6 +39,42 @@
             height: 70vh;
             background-color: #f3f1ed;
         }
+       .ar-controls-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            background-color: #f3f1ed;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ar-instruction-text {
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .ar-button {
+            background-color: #581d1d;
+            color: white;
+            border-radius: 6px;
+            border: none;
+            padding: 15px 35px;
+            font-family: 'Sarabun', sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(88, 29, 29, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .ar-button:active {
+            transform: scale(0.95); /* เอฟเฟกต์เมื่อกดปุ่ม */
+        }
+        
         .blueprint-section {
         text-align: center;
         padding: 20px;
@@ -62,10 +98,45 @@
             text-align: center;
             font-size: 1.4rem;
         }
+        
         .university-logo {
             height: 60px;
         }
         }
+
+        .member-section {
+        background-color: #f9f9f9;
+        padding: 30px 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    .member-container {
+        text-align: left; 
+    }
+
+    .member-container p {
+        font-weight: bold;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        color: #581d1d;
+    }
+
+    .member-grid {
+        display: inline-grid; 
+        grid-template-columns:120px 150px auto; 
+        column-gap: 20px; 
+        row-gap: 8px;    
+        font-size: 0.85rem; 
+        color: #333;
+    }
+
+    .member-row {
+        display: contents; 
+    }
+
+    .firstname, .lastname {
+        text-align: left;
+    }
 
     </style>
 </head>
@@ -88,14 +159,13 @@
         camera-controls 
         shadow-intensity="1" 
         auto-rotate>
-        
-        <button slot="ar-button" style="background-color: rgb(243,241,237); border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; padding: 10px;">
-        </button>
-
     </model-viewer>
 
-    <div style="text-align: center; padding: 20px;">
-        <h3>Scan to view a 3D AR model</h3>
+    <div class="ar-controls-section">
+        <h3 class="ar-instruction-text">Click to view a 3D AR model</h3>
+        <button slot="ar-button" class="ar-button">
+            AR model
+        </button>
     </div>
 
     <div class="blueprint-section">
@@ -105,9 +175,67 @@
     <div class="video-section">
     <h2>Presentation Video</h2>
     <div class="video-container">
-        <iframe width="560" height="315" src=" " frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nthFJwVqeZg" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
+
+<footer class="member-section">
+    <div class="member-container">
+        <p>รายชื่อสมาชิกกลุ่ม I46</p>
+        <div class="member-grid">
+            <div class="member-row">
+                <span class="firstname">กฤษณะ​</span>
+                <span class="lastname">เข็ม​นอก</span>
+                <span class="StudentID">67155793</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">ชื่อ</span>
+                <span class="lastname">นามสกุล</span>
+                <span class="StudentID">รหัสนักศึกษา</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">เฌอลินน์</span>
+                <span class="lastname">ณัชพัฒน์</span>
+                <span class="StudentID">67172772</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">เปมิกา</span>
+                <span class="lastname">ค้ายาดี</span>
+                <span class="StudentID">67167571</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">พีรพัฒน์</span>
+                <span class="lastname">พรมวงษา</span>
+                <span class="StudentID">67175568</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">พรลภัส</span>
+                <span class="lastname">แนบพุดซา</span>
+                <span class="StudentID">68119035</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">ภูมิพัฒน์</span>
+                <span class="lastname">อุตยะราช</span>
+                <span class="StudentID">67142023</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">วฤทธิกร</span>
+                <span class="lastname">สารวัน</span>
+                <span class="StudentID">67148472</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">ศรัณย์</span>
+                <span class="lastname">สุขกร</span>
+                <span class="StudentID">67122450</span>
+            </div>
+            <div class="member-row">
+                <span class="firstname">อัฑฒ์ศดิศ</span>
+                <span class="lastname">สมิตะมาน</span>
+                <span class="StudentID">67181884</span>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
